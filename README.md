@@ -25,6 +25,13 @@ not have to re-teach the same discipline to every agent, every session.
 | --- | --- |
 | [diagnosing-bugs](skills/engineering/diagnosing-bugs/SKILL.md) | A bug or flaky failure is confusing, or a first fix attempt already failed |
 | [writing-for-agents](skills/engineering/writing-for-agents/SKILL.md) | Writing or editing instructions/agent/skill files, or a response feels bloated |
+| [mcp-hardening](skills/engineering/mcp-hardening/SKILL.md) | Building or reviewing an MCP server or API tool: credentials, redirects, budgets, writes |
+| [collector-audit](skills/engineering/collector-audit/SKILL.md) | Data collected into a local index is missing, stale, duplicated or deleted |
+| [tdd](skills/engineering/tdd/SKILL.md) | Test-first features, bug fixes that need a regression test |
+| [code-review](skills/engineering/code-review/SKILL.md) | Reviewing a diff, pull request or branch |
+| [performance-benchmark](skills/engineering/performance-benchmark/SKILL.md) | Before claiming something got faster, smaller or cheaper |
+| [auth-debugging](skills/engineering/auth-debugging/SKILL.md) | OAuth/OIDC, service accounts, bearer tokens, 401/403 |
+| [observability-triage](skills/engineering/observability-triage/SKILL.md) | Missing metrics, empty panels, silent alerts, missing logs |
 
 ### Productivity
 
@@ -33,9 +40,34 @@ not have to re-teach the same discipline to every agent, every session.
 | [grilling](skills/productivity/grilling/SKILL.md) | A plan or request is underspecified, before starting the work |
 | [handoff](skills/productivity/handoff/SKILL.md) | A session, or a subagent, needs to hand off durable facts vs. in-progress state |
 | [wait-what](skills/productivity/wait-what/SKILL.md) | A reply did not land and needs a plain-language re-pitch |
+| [research](skills/productivity/research/SKILL.md) | Docs, versions, prior art or alternatives need traceable evidence |
+| [durable-knowledge](skills/productivity/durable-knowledge/SKILL.md) | End of a task: save a verified, reusable finding with provenance, or nothing |
+| [teach](skills/productivity/teach/SKILL.md) | Someone wants a thorough, beginner-friendly explanation |
+
+### Tools
+
+| Tool | What it does |
+| --- | --- |
+| [git-attribution-guard](tools/git-attribution-guard/) | Global Git hook that blocks `Co-authored-by` trailers and AI attribution in commits, outgoing history and tags |
+
+### Templates
+
+[Instructions and hooks](templates/) to copy: API-first routing, no AI attribution, knowledge-first recall, and a policy hook that re-injects rules every prompt and into subagents.
+
+### Guides
+
+| Guide | Topic |
+| --- | --- |
+| [layered-recall](guides/layered-recall.md) | Four recall levels with budgets; why lexical search before vectors |
+| [knowledge-base](guides/knowledge-base.md) | Collected, curated and live layers; Git history, governance, session journal |
+| [agent-guardrails](guides/agent-guardrails.md) | Which rules need instructions, hooks or server-side enforcement |
 
 This list grows over time. Skills here are deliberately generic: nothing in
 this repo is tied to a specific employer, company, or private project.
+
+For a matching MCP server that applies these rules (bounded, redacted output,
+optional integrations, configurable API sources, durable notes), see
+[contextloom-mcp](https://github.com/jagarkarlo/contextloom-mcp).
 
 ## Installing a skill
 
@@ -64,6 +96,7 @@ A good skill:
   [writing-for-agents](skills/engineering/writing-for-agents/SKILL.md) for why).
 - Contains nothing specific to a single company, employer, or private
   codebase.
+- Passes `node scripts/validate.mjs` (frontmatter, folder name, links).
 
 ## Related
 
