@@ -32,6 +32,7 @@ not have to re-teach the same discipline to every agent, every session.
 | [performance-benchmark](skills/engineering/performance-benchmark/SKILL.md) | Before claiming something got faster, smaller or cheaper |
 | [auth-debugging](skills/engineering/auth-debugging/SKILL.md) | OAuth/OIDC, service accounts, bearer tokens, 401/403 |
 | [observability-triage](skills/engineering/observability-triage/SKILL.md) | Missing metrics, empty panels, silent alerts, missing logs |
+| [gitops-review](skills/engineering/gitops-review/SKILL.md) | Reviewing Kubernetes manifests, Helm charts, values files or GitOps changes |
 
 ### Productivity
 
@@ -42,6 +43,8 @@ not have to re-teach the same discipline to every agent, every session.
 | [wait-what](skills/productivity/wait-what/SKILL.md) | A reply did not land and needs a plain-language re-pitch |
 | [research](skills/productivity/research/SKILL.md) | Docs, versions, prior art or alternatives need traceable evidence |
 | [durable-knowledge](skills/productivity/durable-knowledge/SKILL.md) | End of a task: save a verified, reusable finding with provenance, or nothing |
+| [knowledge-lint](skills/productivity/knowledge-lint/SKILL.md) | Auditing and healing a knowledge base: missing sources, stale notes, duplicates |
+| [docs-runbook](skills/productivity/docs-runbook/SKILL.md) | Writing or updating executable operational runbooks and troubleshooting guides |
 | [teach](skills/productivity/teach/SKILL.md) | Someone wants a thorough, beginner-friendly explanation |
 
 ### Tools

@@ -43,7 +43,10 @@ Keep two short documents inside the knowledge directory:
 A lint command scores the knowledge against them: missing sources, stale or
 expired entries, duplicate titles, malformed files, entries without a project,
 level-1 map over budget, uncommitted edits. Fix what it lists; do not invent
-sources to raise the score.
+sources to raise the score. Surface any collector older than 7 days in the
+level-1 map so stale indexes are noticed immediately at session start, and
+verify `.git/HEAD` (or a valid worktree `gitdir:` target) when discovering local
+clones so an empty `.git` directory at a hub root never blocks recursion.
 
 ## Session journal
 
